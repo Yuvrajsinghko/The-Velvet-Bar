@@ -1,9 +1,10 @@
-import { openingHours, socials } from "../../constants/constants";
+import { openingHours, socials, storeInfo } from "../../constants/constants";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 const Contact = () => {
+  const {heading,contact:{phone,email},address} =storeInfo;
   useGSAP(() => {
     const titleSplit = SplitText.create("#contact h2", { type: "words" });
 
@@ -56,17 +57,18 @@ const Contact = () => {
       />
 
       <div className="content">
-        <h2>Where to Find Us</h2>
+        
+        <h2>{heading}</h2>
 
         <div>
           <h3>Visit Our Bar</h3>
-          <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
+          <p>{address}</p>
         </div>
 
         <div>
           <h3>Contact Us</h3>
-          <p>(555) 987-6543</p>
-          <p>hello@jsmcocktail.com</p>
+          <p>{phone}</p>
+          <p>{email}</p>
         </div>
 
         <div>

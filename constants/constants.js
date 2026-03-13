@@ -105,7 +105,7 @@ const storeInfo = {
  address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
  contact: {
 	phone: "(555) 987-6543",
-	email: "hello@yuvcocktail.com",
+	email: "ragnar@velvetbar.com",
  },
 };
 
